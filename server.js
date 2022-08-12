@@ -77,7 +77,7 @@ app.put("/markComplete", (request, response) => {
       },
       {
         sort: { _id: -1 },
-        upsert: false,
+        upsert: false,      // If true and 'itemFromJS' does not exist, it will insert a new one.
       }
     )
     .then((result) => {
